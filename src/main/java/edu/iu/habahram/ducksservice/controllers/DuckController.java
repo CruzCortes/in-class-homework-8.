@@ -24,6 +24,9 @@ public class DuckController {
     }
 
 
+
+
+
    @PostMapping
     public boolean add(@RequestBody DuckData duck) {
        try {
@@ -32,6 +35,26 @@ public class DuckController {
            throw new RuntimeException(e);
        }
    }
+
+    // TODO: sort based on type
+    @PostMapping
+    public void sort(){
+
+    }
+
+    /*
+        @GetMapping
+    public List<DuckData> findAll() {
+        try {
+            List<DuckData> ducks = ducksRepository.findAll();
+            Collections.sort(ducks);
+            return ducks;
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+     */
 
     @GetMapping
     public List<DuckData> findAll() {
